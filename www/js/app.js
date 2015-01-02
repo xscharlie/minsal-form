@@ -30,7 +30,7 @@ angular.module('main', ['ionic', 'mainMenu','listForms'])
     controller: 'mainMenu'
   })
 
-    .state('app.playlists', {
+    .state('app.list', {
       url: "/menu",
       views: {
         'menuContent': {

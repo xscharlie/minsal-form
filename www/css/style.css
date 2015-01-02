@@ -1,1 +1,26 @@
 /* Empty. Add your own CSS if you like */
+body{
+	background-color: #ECEFF1;
+}
+
+.white{
+	color: white !important;
+}
+
+.next-icon{
+	text-align:right; 
+	vertical-align:middle;
+	float: right;
+	display: inline;
+	margin-right: -30px;	
+}
+
+.list-element{
+	display: inline;
+	color: #5A676E;
+}
+
+
+.gray-text{
+	color: #5A676E;
+}
