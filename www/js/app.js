@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('main', ['ionic', 'mainMenu','listForms'])
+angular.module('main', ['ionic', 'ngMaterial','mainMenu','listForms', 'forms'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -29,13 +29,30 @@ angular.module('main', ['ionic', 'mainMenu','listForms'])
     templateUrl: "templates/menu.html",
     controller: 'mainMenu'
   })
-
     .state('app.list', {
       url: "/menu",
       views: {
         'menuContent': {
           templateUrl: "templates/list-forms.html",
           controller: 'listForms'
+        }
+      }
+    })
+    .state('app.f1', {
+      url: "/form/1",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/F1.html",
+          controller: 'form1'
+        }
+      }
+    })    
+    .state('app.f2', {
+      url: "/form/2",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/F2.html",
+          controller: 'form2'
         }
       }
     });

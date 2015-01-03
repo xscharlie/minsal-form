@@ -1,0 +1,45 @@
+<ion-view title="Entidad que brinda servicio">
+	<ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+    </ion-nav-buttons>
+  <ion-content>
+    
+    <!-- <ion-list> -->
+    <div class="list">
+        <label class="item item-radio item-thumbnail-left" ng-repeat="entidad in entidades">
+		    <input type="radio" name="group" value="{{entidad.id}}" ng-model="institucion" ng-click="">
+		    <div class="item-content">
+		      <img src="img/{{entidad.icon}}">
+          
+			  <div class="item-text-wrap gray-text">
+			  	  <br>
+				  <h2 class="gray-text">{{entidad.name}}</h2>
+			  </div>
+		    </div>
+		    <i class="radio-icon ion-checkmark gray-text"></i>
+		</label>
+
+	</div>
+    <!-- </ion-list> -->
+
+  </ion-content>
+   <div class="tabs tabs-positive tabs-icon-top">
+	  <a class="tab-item" ng-click="back()">
+	    <i class="icon fa fa-angle-left fa-2x"></i>
+	    Anterior
+	  </a>
+	  <a class="tab-item" ng-click="save()">
+	    <i class="icon fa fa-floppy-o "></i>
+	    Guardar
+	  </a>
+	  <a class="tab-item" ng-click="skip()">
+	    <i class="icon fa fa-angle-double-right fa-2x"></i>
+	    Saltar
+	  </a>
+	  <a class="tab-item" ng-click="next()">
+	    <i class="icon fa fa-angle-right fa-2x"></i>
+	    Siguiente
+	  </a>
+	</div>
+</ion-view>

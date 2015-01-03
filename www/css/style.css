@@ -22,5 +22,7 @@ body{
 
 
 .gray-text{
-	color: #5A676E;
+	color: #5A676E !important;
 }
+
+
