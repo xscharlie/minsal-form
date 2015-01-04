@@ -1,63 +1,69 @@
 <ion-view view-title="Datos del servicio">
-	<ion-nav-buttons side="left">
-        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
-        </button>
-     </ion-nav-buttons>
-  <ion-content>
+	<ion-nav-buttons side="right">
+	    <button menu-toggle="right" class="button button-icon icon ion-navicon"></button>
+	</ion-nav-buttons>
+  <ion-content class="has-header">
 
    <ion-list>
     <!-- fecha -->
   		<label class="item item-input">
-		    <span class="input-label">Fecha:</span>
-		    <input type="date">
+		    <span class="input-label gray-text">Fecha:</span>
+		    <input type="date" class="gray-text-input">
 	  	</label>
 
 	<!--  codigo ambulancia -->
       	<label class="item item-input">
-		    <span class="input-label">Código Ambulancia:</span>
-		    <input type="text">
+		    <span class="input-label gray-text">Código Ambulancia:</span>
+		    <input type="text" class="gray-text-input">
+	  	</label>
+
+	
+    <!--  Direccion de la asistencia -->
+      	<label class="item item-input item-stacked-label">
+		    <span class="input-label gray-text">Dirección de asistencia:</span>
+		    <input type="text" class="gray-text-input">
 	  	</label>
 
 	<!-- cronologia -->
 	  	<div>
           <ion-item ng-click="toggleGroup(1)"
                     ng-class="{active: isGroupShown(1)}">
-              <i class="icon" ng-class="isGroupShown(1) ? 'ion-minus' : 'ion-plus'"></i>
+              <i class="icon  gray-text" ng-class="isGroupShown(1) ? 'ion-minus' : 'ion-plus'"></i>
             &nbsp;
-            Cronología
+            <span class="gray-text">Cronología</span>
           </ion-item>
           <div class="item-accordion" ng-show="isGroupShown(1)">
 			<div class="row">
 				<div class="col col-50">
 					<label class="sub-line item-input">
-					    <span class="input-label">E:</span>
-					    <input type="time">
+					    <span class="input-label gray-text">E:</span>
+					    <input type="time" class="gray-text-input">
 					 </label>
 					<label class="sub-line item-input">
-					    <span class="input-label">EL:</span>
-					    <input type="time">
+					    <span class="input-label gray-text">EL:</span>
+					    <input type="time" class="gray-text-input">
 					</label>
 					<label class="sub-line item-input">
-					    <span class="input-label">EA:</span>
-					    <input type="time">
+					    <span class="input-label gray-text">EA:</span>
+					    <input type="time" class="gray-text-input">
 					</label>
 					<label class="sub-line item-input">
-					    <span class="input-label">EC:</span>
-					    <input type="time">
+					    <span class="input-label gray-text">EC:</span>
+					    <input type="time" class="gray-text-input">
 					</label>
 				</div>
 				<div class="col col-50">
 					<label class="sub-line item-input">
-					    <span class="input-label">EE:</span>
-					    <input type="time">
+					    <span class="input-label gray-text">EE:</span>
+					    <input type="time" class="gray-text-input">
 					</label>
 					<label class="sub-line item-input">
-					    <span class="input-label">ED:</span>
-					    <input type="time">
+					    <span class="input-label gray-text">ED:</span>
+					    <input type="time" class="gray-text-input">
 					</label>
 					<label class="sub-line item-input">
-					    <span class="input-label">D:</span>
-					    <input type="time">
+					    <span class="input-label gray-text">D:</span>
+					    <input type="time" class="gray-text-input">
 					</label>
 				</div>
 			</div>
@@ -67,38 +73,33 @@
 		<div>
           	<ion-item ng-click="toggleGroup(2)"
                     ng-class="{active: isGroupShown(2)}">
-	            <i class="icon" ng-class="isGroupShown(2) ? 'ion-minus' : 'ion-plus'"></i>
+	            <i class="icon  gray-text" ng-class="isGroupShown(2) ? 'ion-minus' : 'ion-plus'"></i>
 	            &nbsp;
-	            Motivo Atención
+	            <span class="gray-text">Motivo Atención</span>
           	</ion-item>
           	<div class="item-accordion" ng-show="isGroupShown(2)">
 				<ion-item>
-					<ion-checkbox class="sub-line checkbox-stable" ng-model="isMed">Médico</ion-checkbox>
-					<ion-checkbox class="sub-line checkbox-stable" ng-model="isQui">Quirúrgica</ion-checkbox>
-					<ion-checkbox class="sub-line checkbox-stable" ng-model="isGin">Ginecoobstétrica</ion-checkbox>
+					<ion-checkbox class="sub-line checkbox-stable gray-text-input" ng-model="isMed">Médico</ion-checkbox>
+					<ion-checkbox class="sub-line checkbox-stable gray-text-input" ng-model="isQui">Quirúrgica</ion-checkbox>
+					<ion-checkbox class="sub-line checkbox-stable gray-text-input" ng-model="isGin">Ginecoobstétrica</ion-checkbox>
 				</ion-item>
 		  	</div>
         </div>
-    <!--  Direccion de la asistencia -->
-      	<label class="item item-input item-stacked-label">
-		    <span class="input-label">Dirección de asistencia:</span>
-		    <input type="text">
-	  	</label>
 	<!-- Lugar ocurrencia -->
 		<div>
           	<ion-item ng-click="toggleGroup(3)"
                     ng-class="{active: isGroupShown(3)}">
-	            <i class="icon" ng-class="isGroupShown(3) ? 'ion-minus' : 'ion-plus'"></i>
+	            <i class="icon  gray-text" ng-class="isGroupShown(3) ? 'ion-minus' : 'ion-plus'"></i>
 	            &nbsp;
-	            Lugar de ocurrencia
+	            <span class="gray-text">Lugar de ocurrencia</span>
           	</ion-item>
           	<div class="item-accordion" ng-show="isGroupShown(3)">
 				<ion-item>
-					<ion-checkbox class="sub-line checkbox-stable" ng-model="isHog">Hogar</ion-checkbox>
-					<ion-checkbox class="sub-line checkbox-stable" ng-model="isPub">Via pública</ion-checkbox>
-					<ion-checkbox class="sub-line checkbox-stable" ng-model="isTra">Trabajo</ion-checkbox>
-					<ion-checkbox class="sub-line checkbox-stable" ng-model="isEdu">Educativo</ion-checkbox>
-					<ion-checkbox class="sub-line checkbox-stable" ng-model="isDep">Deporte / Recreativo</ion-checkbox>
+					<ion-checkbox class="sub-line checkbox-stable gray-text-input" ng-model="isHog">Hogar</ion-checkbox>
+					<ion-checkbox class="sub-line checkbox-stable gray-text-input" ng-model="isPub">Via pública</ion-checkbox>
+					<ion-checkbox class="sub-line checkbox-stable gray-text-input" ng-model="isTra">Trabajo</ion-checkbox>
+					<ion-checkbox class="sub-line checkbox-stable gray-text-input" ng-model="isEdu">Educativo</ion-checkbox>
+					<ion-checkbox class="sub-line checkbox-stable gray-text-input" ng-model="isDep">Deporte / Recreativo</ion-checkbox>
 				</ion-item>
 		  	</div>
         </div>
@@ -107,9 +108,9 @@
 
   <!-- footer bar -->
    <div class="tabs tabs-positive tabs-icon-top">
-	  <a class="tab-item" ng-click="back()">
-	    <i class="icon fa fa-angle-left fa-2x"></i>
-	    Anterior
+	  <a class="tab-item" ng-click="home()">
+	    <i class="icon fa fa-home fa-2x"></i>
+	    Inicio
 	  </a>
 	  <a class="tab-item" ng-click="save()">
 	    <i class="icon fa fa-floppy-o "></i>
@@ -125,36 +126,3 @@
 	  </a>
 	</div>
 </ion-view>
-
-<!-- <div class="col col-50">
-					<label class="item item-input">
-					    <span class="input-label">E</span>
-					    <input type="time">
-					 </label>
-					<label class="item item-input">
-					    <span class="input-label">EL</span>
-					    <input type="time">
-					</label>
-					<label class="item item-input">
-					    <span class="input-label">EA</span>
-					    <input type="time">
-					</label>
-					<label class="item item-input">
-					    <span class="input-label">EC</span>
-					    <input type="time">
-					</label>
-				</div>
-				<div class="col col-50">
-					<label class="item item-input">
-					    <span class="input-label">EE</span>
-					    <input type="time">
-					</label>
-					<label class="item item-input">
-					    <span class="input-label">ED</span>
-					    <input type="time">
-					</label>
-					<label class="item item-input">
-					    <span class="input-label">D</span>
-					    <input type="time">
-					</label>
-				</div> -->

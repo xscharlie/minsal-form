@@ -19,8 +19,8 @@ angular.module('forms', [])
         $state.go('app.f2');
     }
 
-    $scope.back = function(){
-        console.log('back: ');
+    $scope.home = function(){
+        console.log('home: ');
         $state.go('app.list');
     }
 
@@ -40,7 +40,8 @@ angular.module('forms', [])
         } else {
           $scope.shownGroup = group;
         }
-      };
+    };
+
     $scope.isGroupShown = function(group) {
         return $scope.shownGroup === group;
     };
@@ -50,18 +51,41 @@ angular.module('forms', [])
         console.log('save: '+variable);
     }
 
-    $scope.back = function(){
-        console.log('back: ');
-        $state.go('app.F1');
+    $scope.home = function(){
+        console.log('home: ');
+        $state.go('app.list');
     }
 
     $scope.skip = function() {
         console.log('skip: ');
+        $state.go('app.f3');
     }
 
     $scope.next = function(){
         console.log('next: ');
+        $state.go('app.f3');
+    }
+})
+/*-------------------- Controller Form3 ------------------*/
+.controller('form3', function($scope, $state) {
+
+    $scope.save = function(variable) {
+        console.log('save: '+variable);
     }
 
+    $scope.home = function(){
+        console.log('home: ');
+        $state.go('app.list');
+    }
+
+    $scope.skip = function() {
+        console.log('skip: ');
+        $state.go('app.f4');
+    }
+
+    $scope.next = function(){
+        console.log('next: ');
+        $state.go('app.f4');
+    }
 
 });

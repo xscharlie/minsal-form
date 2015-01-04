@@ -25,6 +25,12 @@ body{
 	color: #5A676E !important;
 }
 
+.gray-text-input{
+	color: #7F8B8F !important;
+}
+
+
+
 /* ******* acordion ******* */
 .list .item.item-accordion {
   line-height: 38px;
@@ -46,5 +52,12 @@ body{
 	margin-bottom: 5px;
 }
 
+.title{
+	text-align: center !important;
+}
 
-
+.checkbox-stable input:before, .checkbox-stable .checkbox-icon:before {
+  border-color: #4DB6AC !important; }
+.checkbox-stable input:checked:before, .checkbox-stable input:checked + .checkbox-icon:before {
+  background: #4DB6AC !important;
+  border-color: #4DB6AC !important; }
