@@ -1,5 +1,4 @@
 angular.module('listForms', [])
-
 .controller('listForms', function($scope) {
   $scope.forms = [
     { title: 'Entidad que brinda el servicio', id: 1 },
@@ -22,4 +21,9 @@ angular.module('listForms', [])
     { title: 'Diagnostico presunto', id: 18 },
     { title: 'Material de intercambio', id: 19 }
   ];
+
+  $scope.initWaves = function(){
+      Waves.displayEffect();
+    }
+
 });

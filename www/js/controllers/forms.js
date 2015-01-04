@@ -30,9 +30,22 @@ angular.module('forms', [])
     }
 })
 
-/*-------------------- Controller Form ------------------*/
+/*-------------------- Controller Form2 ------------------*/
 .controller('form2', function($scope, $state) {
-    
+
+    $scope.toggle = 1;
+    $scope.toggleGroup = function(group) {
+        if ($scope.isGroupShown(group)) {
+          $scope.shownGroup = null;
+        } else {
+          $scope.shownGroup = group;
+        }
+      };
+    $scope.isGroupShown = function(group) {
+        return $scope.shownGroup === group;
+    };
+
+
     $scope.save = function(variable) {
         console.log('save: '+variable);
     }
@@ -49,4 +62,6 @@ angular.module('forms', [])
     $scope.next = function(){
         console.log('next: ');
     }
+
+
 });

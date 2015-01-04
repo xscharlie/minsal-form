@@ -3,9 +3,8 @@
         <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
         </button>
     </ion-nav-buttons>
-  <ion-content>
+  <ion-content class="has-header">
     
-    <!-- <ion-list> -->
     <div class="list">
         <label class="item item-radio item-thumbnail-left" ng-repeat="entidad in entidades">
 		    <input type="radio" name="group" value="{{entidad.id}}" ng-model="institucion" ng-click="">
@@ -21,8 +20,8 @@
 		</label>
 
 	</div>
-    <!-- </ion-list> -->
 
+	
   </ion-content>
    <div class="tabs tabs-positive tabs-icon-top">
 	  <a class="tab-item" ng-click="back()">

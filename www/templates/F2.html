@@ -4,9 +4,105 @@
         </button>
      </ion-nav-buttons>
   <ion-content>
-    
 
+   <ion-list>
+    <!-- fecha -->
+  		<label class="item item-input">
+		    <span class="input-label">Fecha:</span>
+		    <input type="date">
+	  	</label>
 
+	<!--  codigo ambulancia -->
+      	<label class="item item-input">
+		    <span class="input-label">Código Ambulancia:</span>
+		    <input type="text">
+	  	</label>
+
+	<!-- cronologia -->
+	  	<div>
+          <ion-item ng-click="toggleGroup(1)"
+                    ng-class="{active: isGroupShown(1)}">
+              <i class="icon" ng-class="isGroupShown(1) ? 'ion-minus' : 'ion-plus'"></i>
+            &nbsp;
+            Cronología
+          </ion-item>
+          <div class="item-accordion" ng-show="isGroupShown(1)">
+			<div class="row">
+				<div class="col col-50">
+					<label class="sub-line item-input">
+					    <span class="input-label">E:</span>
+					    <input type="time">
+					 </label>
+					<label class="sub-line item-input">
+					    <span class="input-label">EL:</span>
+					    <input type="time">
+					</label>
+					<label class="sub-line item-input">
+					    <span class="input-label">EA:</span>
+					    <input type="time">
+					</label>
+					<label class="sub-line item-input">
+					    <span class="input-label">EC:</span>
+					    <input type="time">
+					</label>
+				</div>
+				<div class="col col-50">
+					<label class="sub-line item-input">
+					    <span class="input-label">EE:</span>
+					    <input type="time">
+					</label>
+					<label class="sub-line item-input">
+					    <span class="input-label">ED:</span>
+					    <input type="time">
+					</label>
+					<label class="sub-line item-input">
+					    <span class="input-label">D:</span>
+					    <input type="time">
+					</label>
+				</div>
+			</div>
+          </div>
+        </div>
+    <!-- Motivo atencion -->
+		<div>
+          	<ion-item ng-click="toggleGroup(2)"
+                    ng-class="{active: isGroupShown(2)}">
+	            <i class="icon" ng-class="isGroupShown(2) ? 'ion-minus' : 'ion-plus'"></i>
+	            &nbsp;
+	            Motivo Atención
+          	</ion-item>
+          	<div class="item-accordion" ng-show="isGroupShown(2)">
+				<ion-item>
+					<ion-checkbox class="sub-line checkbox-stable" ng-model="isMed">Médico</ion-checkbox>
+					<ion-checkbox class="sub-line checkbox-stable" ng-model="isQui">Quirúrgica</ion-checkbox>
+					<ion-checkbox class="sub-line checkbox-stable" ng-model="isGin">Ginecoobstétrica</ion-checkbox>
+				</ion-item>
+		  	</div>
+        </div>
+    <!--  Direccion de la asistencia -->
+      	<label class="item item-input item-stacked-label">
+		    <span class="input-label">Dirección de asistencia:</span>
+		    <input type="text">
+	  	</label>
+	<!-- Lugar ocurrencia -->
+		<div>
+          	<ion-item ng-click="toggleGroup(3)"
+                    ng-class="{active: isGroupShown(3)}">
+	            <i class="icon" ng-class="isGroupShown(3) ? 'ion-minus' : 'ion-plus'"></i>
+	            &nbsp;
+	            Lugar de ocurrencia
+          	</ion-item>
+          	<div class="item-accordion" ng-show="isGroupShown(3)">
+				<ion-item>
+					<ion-checkbox class="sub-line checkbox-stable" ng-model="isHog">Hogar</ion-checkbox>
+					<ion-checkbox class="sub-line checkbox-stable" ng-model="isPub">Via pública</ion-checkbox>
+					<ion-checkbox class="sub-line checkbox-stable" ng-model="isTra">Trabajo</ion-checkbox>
+					<ion-checkbox class="sub-line checkbox-stable" ng-model="isEdu">Educativo</ion-checkbox>
+					<ion-checkbox class="sub-line checkbox-stable" ng-model="isDep">Deporte / Recreativo</ion-checkbox>
+				</ion-item>
+		  	</div>
+        </div>
+   </ion-list>
   </ion-content>
 
   <!-- footer bar -->
@@ -29,3 +125,36 @@
 	  </a>
 	</div>
 </ion-view>
+
+<!-- <div class="col col-50">
+					<label class="item item-input">
+					    <span class="input-label">E</span>
+					    <input type="time">
+					 </label>
+					<label class="item item-input">
+					    <span class="input-label">EL</span>
+					    <input type="time">
+					</label>
+					<label class="item item-input">
+					    <span class="input-label">EA</span>
+					    <input type="time">
+					</label>
+					<label class="item item-input">
+					    <span class="input-label">EC</span>
+					    <input type="time">
+					</label>
+				</div>
+				<div class="col col-50">
+					<label class="item item-input">
+					    <span class="input-label">EE</span>
+					    <input type="time">
+					</label>
+					<label class="item item-input">
+					    <span class="input-label">ED</span>
+					    <input type="time">
+					</label>
+					<label class="item item-input">
+					    <span class="input-label">D</span>
+					    <input type="time">
+					</label>
+				</div> -->
