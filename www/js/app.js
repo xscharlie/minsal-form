@@ -17,6 +17,41 @@ angular.module('main', ['ionic','mainMenu','listForms', 'forms'])
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+
+    function checkConnection() {
+        var networkState = navigator.connection.type;
+
+        var states = {};
+        states[Connection.UNKNOWN]  = 'Unknown connection';
+        states[Connection.ETHERNET] = 'Ethernet connection';
+        states[Connection.WIFI]     = 'WiFi connection';
+        states[Connection.CELL_2G]  = 'Cell 2G connection';
+        states[Connection.CELL_3G]  = 'Cell 3G connection';
+        states[Connection.CELL_4G]  = 'Cell 4G connection';
+        states[Connection.CELL]     = 'Cell generic connection';
+        states[Connection.NONE]     = 'No network connection';
+
+        toast.showShort('Connection type: ' + states[networkState]);
+        //alert('Connection type: ' + states[networkState]);
+    }
+
+    checkConnection();
+
+
+    document.addEventListener("offline", onOffline, false);
+
+    function onOffline() {
+        toast.showShort('estas offline');
+        //alert('estas offline');
+    }
+
+    document.addEventListener("online", onOnline, false);
+
+    function onOnline() {
+        toast.showShort('estas online');
+        //alert('estas online');
+    }
+
   });
 })
 
