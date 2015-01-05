@@ -15,6 +15,15 @@ body{
 	margin-right: -30px;	
 }
 
+.menu-icon{
+	text-align:left; 
+	vertical-align:middle;
+	float: left;
+	display: inline;
+	margin-left: 0.5em;	
+	margin-right: 1em;
+}
+
 .list-element{
 	display: inline;
 	color: #5A676E;
@@ -23,6 +32,10 @@ body{
 
 .gray-text{
 	color: #5A676E !important;
+}
+
+.stable-text{
+	color: #80CBC4 !important;
 }
 
 .gray-text-input{

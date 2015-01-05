@@ -8,13 +8,13 @@
     <!-- nombre paciente -->
   		<label class="item item-input item-stacked-label">
 		    <span class="input-label gray-text">Nombre Paciente:</span>
-		    <input type="text" class="gray-text-input">
+		    <input type="text" class="gray-text-input" ng-model="data.nombre">
 	  	</label>
 
 	<!--  codigo ambulancia -->
       	<label class="item item-input item-select">
 		    <span class="input-label gray-text">Sexo:</span>
-		    <select class="gray-text-input" style="position: absolute; left: 7em;">
+		    <select class="gray-text-input" style="position: absolute; left: 7em;" ng-model="data.sexo">
 		      <option selected class="">Seleccione</option>
 		      <option>Femenino</option>
 		      <option>Masculino</option>
@@ -24,27 +24,27 @@
     <!--  Direccion de la asistencia -->
       	<label class="item item-input item-stacked-label">
 		    <span class="input-label gray-text">Dirección de asistencia:</span>
-		    <input type="text" class="gray-text-input">
+		    <input type="text" class="gray-text-input" ng-model="data.direccion">
 	  	</label>
 	<!--  Edad -->
       	<label class="item item-input">
 		    <span class="input-label gray-text">Edad:</span>
-		    <input type="number" class="gray-text-input">
+		    <input type="number" class="gray-text-input" ng-model="data.edad">
 	  	</label>
 	<!--  Domicilio -->
       	<label class="item item-input item-stacked-label">
 		    <span class="input-label gray-text">Domicilio:</span>
-		    <input type="text" class="gray-text-input">
+		    <input type="text" class="gray-text-input" ng-model="data.domicilio">
 	  	</label>
 	<!--  Telefono -->
       	<label class="item item-input">
 		    <span class="input-label gray-text">Teléfono:</span>
-		    <input type="number" class="gray-text-input">
+		    <input type="number" class="gray-text-input" ng-model="data.telefono">
 	  	</label>
 	<!--  Ocupacion -->
       	<label class="item item-input item-stacked-label">
 		    <span class="input-label gray-text">Ocupación:</span>
-		    <input type="text" class="gray-text-input">
+		    <input type="text" class="gray-text-input" ng-model="data.ocupacion">
 	  	</label>
    </ion-list>
   </ion-content>

@@ -1,7 +1,25 @@
 angular.module('mainMenu', [])
 
-.controller('mainMenu', function($scope, $ionicModal, $timeout) {
-  
+.controller('mainMenu', function($scope, $ionicModal, $timeout, $location) {
+  $scope.recordVoice = function () {
+  	// capture callback
+	var captureSuccess = function(mediaFiles) {
+	    var i, path, len;
+	    for (i = 0, len = mediaFiles.length; i < len; i += 1) {
+	        path = mediaFiles[i].fullPath;
+	        toast.showShort(path);
+	    }
+	};
+
+	// capture error callback
+	var captureError = function(error) {
+	    alert('Error code: ' + error.code, null, 'Capture Error');
+	};
+
+	// start audio capture
+	navigator.device.capture.captureAudio(captureSuccess, captureError, {limit:1});
+  }
+
 });
 
 

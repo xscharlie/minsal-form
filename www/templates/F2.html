@@ -8,20 +8,20 @@
     <!-- fecha -->
   		<label class="item item-input">
 		    <span class="input-label gray-text">Fecha:</span>
-		    <input type="date" class="gray-text-input">
+		    <input type="date" class="gray-text-input" ng-model="data.fecha">
 	  	</label>
 
 	<!--  codigo ambulancia -->
       	<label class="item item-input">
 		    <span class="input-label gray-text">Código Ambulancia:</span>
-		    <input type="text" class="gray-text-input">
+		    <input type="text" class="gray-text-input" ng-model="data.codigo">
 	  	</label>
 
 	
     <!--  Direccion de la asistencia -->
       	<label class="item item-input item-stacked-label">
 		    <span class="input-label gray-text">Dirección de asistencia:</span>
-		    <input type="text" class="gray-text-input">
+		    <input type="text" class="gray-text-input" ng-model="data.direccion">
 	  	</label>
 
 	<!-- cronologia -->
@@ -37,33 +37,33 @@
 				<div class="col col-50">
 					<label class="sub-line item-input">
 					    <span class="input-label gray-text">E:</span>
-					    <input type="time" class="gray-text-input">
+					    <input type="time" class="gray-text-input" ng-model="data.e">
 					 </label>
 					<label class="sub-line item-input">
 					    <span class="input-label gray-text">EL:</span>
-					    <input type="time" class="gray-text-input">
+					    <input type="time" class="gray-text-input" ng-model="data.el">
 					</label>
 					<label class="sub-line item-input">
 					    <span class="input-label gray-text">EA:</span>
-					    <input type="time" class="gray-text-input">
+					    <input type="time" class="gray-text-input" ng-model="data.ea">
 					</label>
 					<label class="sub-line item-input">
 					    <span class="input-label gray-text">EC:</span>
-					    <input type="time" class="gray-text-input">
+					    <input type="time" class="gray-text-input" ng-model="data.ec">
 					</label>
 				</div>
 				<div class="col col-50">
 					<label class="sub-line item-input">
 					    <span class="input-label gray-text">EE:</span>
-					    <input type="time" class="gray-text-input">
+					    <input type="time" class="gray-text-input" ng-model="data.ee">
 					</label>
 					<label class="sub-line item-input">
 					    <span class="input-label gray-text">ED:</span>
-					    <input type="time" class="gray-text-input">
+					    <input type="time" class="gray-text-input" ng-model="data.ed">
 					</label>
 					<label class="sub-line item-input">
 					    <span class="input-label gray-text">D:</span>
-					    <input type="time" class="gray-text-input">
+					    <input type="time" class="gray-text-input" ng-model="data.d">
 					</label>
 				</div>
 			</div>
@@ -79,9 +79,9 @@
           	</ion-item>
           	<div class="item-accordion" ng-show="isGroupShown(2)">
 				<ion-item>
-					<ion-checkbox class="sub-line checkbox-stable gray-text-input" ng-model="isMed">Médico</ion-checkbox>
-					<ion-checkbox class="sub-line checkbox-stable gray-text-input" ng-model="isQui">Quirúrgica</ion-checkbox>
-					<ion-checkbox class="sub-line checkbox-stable gray-text-input" ng-model="isGin">Ginecoobstétrica</ion-checkbox>
+					<ion-checkbox class="sub-line checkbox-stable gray-text-input" ng-model="data.isMed">Médico</ion-checkbox>
+					<ion-checkbox class="sub-line checkbox-stable gray-text-input" ng-model="data.isQui">Quirúrgica</ion-checkbox>
+					<ion-checkbox class="sub-line checkbox-stable gray-text-input" ng-model="data.isGin">Ginecoobstétrica</ion-checkbox>
 				</ion-item>
 		  	</div>
         </div>
@@ -95,11 +95,11 @@
           	</ion-item>
           	<div class="item-accordion" ng-show="isGroupShown(3)">
 				<ion-item>
-					<ion-checkbox class="sub-line checkbox-stable gray-text-input" ng-model="isHog">Hogar</ion-checkbox>
-					<ion-checkbox class="sub-line checkbox-stable gray-text-input" ng-model="isPub">Via pública</ion-checkbox>
-					<ion-checkbox class="sub-line checkbox-stable gray-text-input" ng-model="isTra">Trabajo</ion-checkbox>
-					<ion-checkbox class="sub-line checkbox-stable gray-text-input" ng-model="isEdu">Educativo</ion-checkbox>
-					<ion-checkbox class="sub-line checkbox-stable gray-text-input" ng-model="isDep">Deporte / Recreativo</ion-checkbox>
+					<ion-checkbox class="sub-line checkbox-stable gray-text-input" ng-model="data.isHog">Hogar</ion-checkbox>
+					<ion-checkbox class="sub-line checkbox-stable gray-text-input" ng-model="data.isPub">Via pública</ion-checkbox>
+					<ion-checkbox class="sub-line checkbox-stable gray-text-input" ng-model="data.isTra">Trabajo</ion-checkbox>
+					<ion-checkbox class="sub-line checkbox-stable gray-text-input" ng-model="data.isEdu">Educativo</ion-checkbox>
+					<ion-checkbox class="sub-line checkbox-stable gray-text-input" ng-model="data.isDep">Deporte / Recreativo</ion-checkbox>
 				</ion-item>
 		  	</div>
         </div>

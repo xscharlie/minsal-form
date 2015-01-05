@@ -15,17 +15,60 @@
     <ion-content class="has-header">
       <ion-list >
         <ion-item nav-clear menu-close href="#/app/search" class="gray-text">
-          Inicio
+          <span class="menu-icon gray-text">
+            <span class="fa-stack fa-1x stable-text">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-home fa-stack-1x fa-inverse"></i>
+            </span>
+            Inicio
+          </span>
         </ion-item>
         <ion-item nav-clear menu-close href="#/app/browse" class="gray-text">
-          Pendientes de enviar
+          <span class="menu-icon gray-text">
+            <span class="fa-stack fa-1x stable-text">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+            </span>
+            Pendientes de enviar
+          </span>
         </ion-item>
         <ion-item nav-clear menu-close href="#/app/playlists" class="gray-text">
-          Probar conexión
+          <span class="menu-icon gray-text">
+            <span class="fa-stack fa-1x stable-text">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-wifi fa-stack-1x fa-inverse"></i>
+            </span>
+            Probar conexión
+          </span>
         </ion-item>
         <ion-item nav-clear menu-close href="#/app/playlists" class="gray-text">
-          Acerca de
+          <span class="menu-icon gray-text">
+            <span class="fa-stack fa-1x stable-text">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-users fa-stack-1x fa-inverse"></i>
+            </span>
+            Acerca de
+          </span>
         </ion-item>
+        <ion-item nav-clear menu-close class="gray-text" ng-click="recordVoice()">
+          <span class="menu-icon gray-text">
+            <span class="fa-stack fa-1x" style="color: #DE4815">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-microphone fa-stack-1x fa-inverse"></i>
+            </span>
+            Grabar nota de voz
+          </span>          
+        </ion-item>
+        <ion-item nav-clear menu-close class="gray-text">
+          <span class="menu-icon gray-text">
+            <span class="fa-stack fa-1x" style="color: #DE4815">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-play fa-stack-1x fa-inverse"></i>
+            </span>
+            Escuchar nota de voz
+          </span>        
+        </ion-item>
+
       </ion-list>
     </ion-content>
   </ion-side-menu>

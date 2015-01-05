@@ -1,7 +1,7 @@
 angular.module('forms', [])
 /*-------------------- Controller Form1 ------------------*/
 .controller('form1', function($scope, $state) {
-    $scope.institucion = 1;
+    //$scope.institucion = 1;
     $scope.entidades = [
         { id: 1, name: 'Fosalud', icon: 'fosalud.png'},
         { id: 2, name: 'Cruz Verde', icon: 'cruzverde.png'},
@@ -10,8 +10,12 @@ angular.module('forms', [])
         { id: 5, name: 'Policía Nacional Civil', icon: 'pnc.png'}
     ];
 
-    $scope.save = function(variable) {
-        console.log('save: '+variable);
+      $scope.data = {
+        value: 'ng'
+      };
+
+    $scope.save = function() {
+        console.log('save: ', $scope.data.value);
     }
 
     $scope.skip = function() {
@@ -34,6 +38,7 @@ angular.module('forms', [])
 .controller('form2', function($scope, $state) {
 
     $scope.toggle = 1;
+    $scope.data = { };
     $scope.toggleGroup = function(group) {
         if ($scope.isGroupShown(group)) {
           $scope.shownGroup = null;
@@ -46,9 +51,8 @@ angular.module('forms', [])
         return $scope.shownGroup === group;
     };
 
-
-    $scope.save = function(variable) {
-        console.log('save: '+variable);
+    $scope.save = function() {
+        console.log($scope.data);
     }
 
     $scope.home = function(){
@@ -69,8 +73,9 @@ angular.module('forms', [])
 /*-------------------- Controller Form3 ------------------*/
 .controller('form3', function($scope, $state) {
 
-    $scope.save = function(variable) {
-        console.log('save: '+variable);
+    $scope.data = { };
+    $scope.save = function() {
+        console.log($scope.data);
     }
 
     $scope.home = function(){

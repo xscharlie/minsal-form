@@ -6,7 +6,7 @@
     
     <div class="list">
         <label class="item item-radio item-thumbnail-left" ng-repeat="entidad in entidades">
-		    <input type="radio" name="group" value="{{entidad.id}}" ng-model="institucion" ng-click="">
+		    <input type="radio" name="group" ng-value="{{entidad.id}}" ng-model="data.value" ng-click="save()">
 		    <div class="item-content">
 		      <img src="img/{{entidad.icon}}">
           
