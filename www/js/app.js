@@ -10,6 +10,7 @@ angular.module('main', ['ionic','mainMenu','listForms', 'forms'])
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
+    //$state.go('app.f1');
     if (window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
     }
@@ -31,7 +32,7 @@ angular.module('main', ['ionic','mainMenu','listForms', 'forms'])
         states[Connection.CELL]     = 'Cell generic connection';
         states[Connection.NONE]     = 'No network connection';
 
-        toast.showShort('Connection type: ' + states[networkState]);
+        //toast.showShort('Connection type: ' + states[networkState]);
         //alert('Connection type: ' + states[networkState]);
     }
 
@@ -64,21 +65,21 @@ angular.module('main', ['ionic','mainMenu','listForms', 'forms'])
     templateUrl: "templates/menu.html",
     controller: 'mainMenu'
   })
-    .state('app.list', {
-      url: "/menu",
-      views: {
-        'menuContent': {
-          templateUrl: "templates/list-forms.html",
-          controller: 'listForms'
-        }
-      }
-    })
     .state('app.f1', {
       url: "/form/1",
       views: {
         'menuContent': {
           templateUrl: "templates/F1.html",
           controller: 'form1'
+        }
+      }
+    })
+    .state('app.list', {
+      url: "/menu",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/list-forms.html",
+          controller: 'listForms'
         }
       }
     })    
@@ -101,6 +102,6 @@ angular.module('main', ['ionic','mainMenu','listForms', 'forms'])
       }
     });
 
-  // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/menu');
+  // if none of the above states are matched, use this as the fallback 
+  $urlRouterProvider.otherwise('/app/form/1');
 });

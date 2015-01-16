@@ -1,7 +1,4 @@
 /* Empty. Add your own CSS if you like */
-body{
-	background-color: #ECEFF1;
-}
 
 .white{
 	color: white !important;
@@ -74,3 +71,19 @@ body{
 .checkbox-stable input:checked:before, .checkbox-stable input:checked + .checkbox-icon:before {
   background: #4DB6AC !important;
   border-color: #4DB6AC !important; }
+
+  /****************** circle grid ******************/
+
+  .circle-item, .waves-circle{
+  	width: 4em !important;
+  	height: 4em !important;
+  	border-radius: 100%;
+  	margin: 0 auto;
+  	margin-top:2em;
+  	display: table !important;
+  }
+
+  .circle-item-element{
+  	display: table-cell !important;
+  	vertical-align: middle !important;
+  }

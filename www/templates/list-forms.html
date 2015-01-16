@@ -3,12 +3,218 @@
     <button menu-toggle="right" class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
   <ion-content class="has-header">
-    <ion-list>
+   <!--  <ion-list>
       <ion-item ng-repeat="form in forms" href="#/app/form/{{form.id}}" class="item-text-wrap">
         	<div class="list-element">{{form.title}}</div>
         	<div class="next-icon gray-text"><i class="icon ion-chevron-right"></i></div>
       </ion-item>
-    </ion-list>
+    </ion-list> -->
+
+    
+      <div class="row-center ">
+        <div class="col col-center">
+                <div class="card">
+                  <div class="item item-text-wrap gray-text" style="text-align:center; font-size: 1.5em;">
+                       Registro de Atención Prehospitalario
+                  </div>
+                </div>
+        </div>
+      </div>
+
+    <div class="wrapper" ng-init="initWaves()">
+      <div class="row">
+        <div class="col col-10"></div>
+        <div class="col col-80">
+          <div class="row">
+            <div class="col col-33" ng-click="goTo({{forms[0].id}})" ng-click="goTo({{forms[0].id}})" style="text-align:center;">
+              <div class="waves-circle waves-effect waves-light" style="background-color: {{forms[0].color}}"> 
+                <i class="fa {{forms[0].icon}} fa-2x fa-inverse circle-item-element"></i>
+              </div>
+              <span class="gray-text">{{forms[0].title}}</span>
+            </div>
+            <div class="col col-33" ng-click="goTo({{forms[1].id}})" style="text-align:center;">
+              <div class="waves-circle waves-effect waves-light" style="background-color: {{forms[1].color}}">
+                <i class="fa {{forms[1].icon}} fa-2x fa-inverse circle-item-element"></i>
+              </div>
+              <span class="gray-text">{{forms[1].title}}</span>
+            </div>
+            <div class="col col-33" ng-click="goTo({{forms[2].id}})" style="text-align:center;">
+              <div class="circle-item" style="background-color: {{forms[2].color}}">
+                <i class="fa {{forms[2].icon}} fa-2x fa-inverse circle-item-element"></i>
+              </div>
+              <span class="gray-text">{{forms[2].title}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="col col-10"></div>
+      </div>
+
+      <div class="row">
+        <div class="col col-10"></div>
+        <div class="col col-80">
+          <div class="row">
+            <div class="col col-33" ng-click="goTo({{forms[3].id}})" style="text-align:center;">
+              <div class="waves-circle waves-effect waves-light" style="background-color: {{forms[3].color}}">
+                <i class="fa {{forms[3].icon}} fa-2x fa-inverse circle-item-element"></i>
+              </div>
+              <span class="gray-text">{{forms[3].title}}</span>
+            </div>
+            <div class="col col-33" ng-click="goTo({{forms[4].id}})" style="text-align:center;">
+              <div class="waves-circle waves-effect waves-light" style="background-color: {{forms[4].color}}">
+                <i class="fa {{forms[4].icon}} fa-2x fa-inverse circle-item-element"></i>
+              </div>
+              <span class="gray-text">{{forms[4].title}}</span>
+            </div>
+            <div class="col col-33" ng-click="goTo({{forms[5].id}})" style="text-align:center;">
+              <div class="waves-circle waves-effect waves-light" style="background-color: {{forms[5].color}}">
+                <i class="fa {{forms[5].icon}} fa-2x fa-inverse circle-item-element"></i>
+              </div>
+              <span class="gray-text">{{forms[5].title}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="col col-10"></div>
+      </div>
+
+      <div class="row">
+        <div class="col col-10"></div>
+        <div class="col col-80">
+          <div class="row">
+            <div class="col col-33" ng-click="goTo({{forms[6].id}})" style="text-align:center;">
+              <div class="waves-circle waves-effect waves-light" style="background-color: {{forms[6].color}}">
+                <i class="fa {{forms[6].icon}} fa-2x fa-inverse circle-item-element"></i>
+              </div>
+              <span class="gray-text">{{forms[6].title}}</span>
+            </div>
+            <div class="col col-33" ng-click="goTo({{forms[7].id}})" style="text-align:center;">
+              <div class="waves-circle waves-effect waves-light" style="background-color: {{forms[7].color}}">
+                <i class="fa {{forms[7].icon}} fa-2x fa-inverse circle-item-element"></i>
+              </div>
+              <span class="gray-text">{{forms[7].title}}</span>
+            </div>
+            <div class="col col-33" ng-click="goTo({{forms[8].id}})" style="text-align:center;">
+              <div class="waves-circle waves-effect waves-light" style="background-color: {{forms[8].color}}">
+                <i class="fa {{forms[8].icon}} fa-2x fa-inverse circle-item-element"></i>
+              </div>
+              <span class="gray-text">{{forms[8].title}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="col col-10"></div>
+      </div>
+
+
+      <div class="row">
+        <div class="col col-10"></div>
+        <div class="col col-80">
+          <div class="row">
+            <div class="col col-33" ng-click="goTo({{forms[9].id}})" style="text-align:center;">
+              <div class="waves-circle waves-effect waves-light" style="background-color: {{forms[9].color}}">
+                <i class="fa {{forms[9].icon}} fa-2x fa-inverse circle-item-element"></i>
+              </div>
+              <span class="gray-text">{{forms[9].title}}</span>
+            </div>
+            <div class="col col-33" ng-click="goTo({{forms[10].id}})" style="text-align:center;">
+              <div class="waves-circle waves-effect waves-light" style="background-color: {{forms[10].color}}">
+                <i class="fa {{forms[10].icon}} fa-2x fa-inverse circle-item-element"></i>
+              </div>
+              <span class="gray-text">{{forms[10].title}}</span>
+            </div>
+            <div class="col col-33" ng-click="goTo({{forms[11].id}})" style="text-align:center;">
+              <div class="waves-circle waves-effect waves-light" style="background-color: {{forms[11].color}}">
+                <i class="fa {{forms[11].icon}} fa-2x fa-inverse circle-item-element"></i>
+              </div>
+              <span class="gray-text">{{forms[11].title}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="col col-10"></div>
+      </div>
+
+      <div class="row">
+        <div class="col col-10"></div>
+        <div class="col col-80">
+          <div class="row">
+            <div class="col col-33" ng-click="goTo({{forms[12].id}})" style="text-align:center;">
+              <div class="waves-circle waves-effect waves-light" style="background-color: {{forms[12].color}}">
+                <i class="fa {{forms[12].icon}} fa-2x fa-inverse circle-item-element"></i>
+              </div>
+              <span class="gray-text">{{forms[12].title}}</span>
+            </div>
+            <div class="col col-33" ng-click="goTo({{forms[13].id}})" style="text-align:center;">
+              <div class="waves-circle waves-effect waves-light" style="background-color: {{forms[13].color}}">
+                <i class="fa {{forms[13].icon}} fa-2x fa-inverse circle-item-element"></i>
+              </div>
+              <span class="gray-text">{{forms[13].title}}</span>
+            </div>
+             <div class="col col-33" ng-click="goTo({{forms[14].id}})" style="text-align:center;">
+              <div class="waves-circle waves-effect waves-light" style="background-color: {{forms[14].color}}"> 
+                <i class="fa {{forms[14].icon}} fa-2x fa-inverse circle-item-element"></i>
+              </div>
+              <span class="gray-text">{{forms[14].title}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="col col-10"></div>
+      </div>
+
+      <div class="row">
+        <div class="col col-10"></div>
+        <div class="col col-80">
+          <div class="row">
+            <div class="col col-33" ng-click="goTo({{forms[15].id}})" style="text-align:center;">
+              <div class="waves-circle waves-effect waves-light" style="background-color: {{forms[15].color}}">
+                <i class="fa {{forms[15].icon}} fa-2x fa-inverse circle-item-element"></i>
+              </div>
+              <span class="gray-text">{{forms[15].title}}</span>
+            </div>
+            <div class="col col-33" ng-click="goTo({{forms[16].id}})" style="text-align:center;">
+              <div class="waves-circle waves-effect waves-light" style="background-color: {{forms[16].color}}">
+                <i class="fa {{forms[16].icon}} fa-2x fa-inverse circle-item-element"></i>
+              </div>
+              <span class="gray-text">{{forms[16].title}}</span>
+            </div>
+            <div class="col col-33" ng-click="goTo({{forms[17].id}})" style="text-align:center;">
+              <div class="waves-circle waves-effect waves-light" style="background-color: {{forms[17].color}}">
+                <i class="fa {{forms[17].icon}} fa-2x fa-inverse circle-item-element"></i>
+              </div>
+              <span class="gray-text">{{forms[17].title}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="col col-10"></div>
+      </div>
+
+      <div class="row">
+        <div class="col col-10"></div>
+        <div class="col col-80">
+          <div class="row">
+            <!-- <div class="col col-33" ng-click="goTo({{forms[0].id}})" style="text-align:center;">
+              <div class="waves-circle waves-effect waves-light" style="background-color: #9D6800">
+                
+              </div>
+              <span class="gray-text">{{forms[18].title}}</span>
+            </div>
+            <div class="col col-33" ng-click="goTo({{forms[0].id}})" style="text-align:center;">
+              <div class="waves-circle waves-effect waves-light" style="background-color: #006C6F">
+                
+              </div>
+              <span class="gray-text">{{forms[19].title}}</span>
+            </div> -->
+            <div class="col col-33" ng-click="goTo({{forms[18].id}})" style="text-align:center;">
+              <div class="waves-circle waves-effect waves-light" style="background-color: {{forms[18].color}}">
+                <i class="fa {{forms[18].icon}} fa-2x fa-inverse circle-item-element"></i>
+              </div>
+              <span class="gray-text">{{forms[18].title}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="col col-10"></div>
+      </div>
+    </div> <!-- del wrapper -->
+
+
+    
 
   </ion-content>
 </ion-view>
